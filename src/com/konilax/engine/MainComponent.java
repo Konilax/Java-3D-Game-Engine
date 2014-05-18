@@ -1,6 +1,7 @@
 package com.konilax.engine;
 
 import com.konilax.engine.graphics.Window;
+import com.konilax.engine.handlers.Input;
 import com.konilax.engine.util.Time;
 import com.konilax.game.Game;
 
@@ -64,6 +65,7 @@ public class MainComponent {
                     stop();
 
                 Time.setDelta(frameTime);
+                Input.update();
 
                 game.input();
                 game.update();
